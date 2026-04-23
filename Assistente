@@ -65,15 +65,22 @@ Clique em **"Iniciar Monitoramento"**.
 
 ## 🧠 Complexidade (Big O)
 
-O sistema possui complexidade aproximada:
+A extração do número utiliza expressão regular sobre o texto capturado do elemento.
 
-- **O(n)** por verificação, onde *n* é o tamanho do texto do elemento analisado
+Considerando `n` como o tamanho do texto analisado:
 
-A cada ciclo:
-- leitura do elemento → O(1)  
-- extração do número (regex) → O(n)  
+- Captura do elemento: O(1)
+- Leitura do texto: O(n)
+- Extração com Regex: O(n)
+- Comparação entre valores: O(1)
 
-Como o processo é repetido em intervalos, o custo total depende do tempo de execução.
+Portanto, cada verificação possui complexidade:
+
+**O(n)**
+
+Como o sistema executa verificações repetidas em intervalos definidos pelo usuário, se forem realizadas `k` verificações, a complexidade total será:
+
+**O(k · n)**
 
 ---
 
