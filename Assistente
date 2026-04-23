@@ -117,6 +117,19 @@ Sugestões de testes automatizados:
 
 ---
 
+## 📚 Documentação
+
+A documentação do projeto foi criada utilizando **MkDocs**.
+
+docs/
+Para visualizar localmente:
+
+```bash
+pip install mkdocs mkdocs-material
+python -m mkdocs serve
+
+Acesso no navegador: http://127.0.0.1:8000
+
 ## 👥 Autor(es)
 
 - Leticia Lavigne Guedes Germano - 2322082002
