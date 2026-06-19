@@ -1,0 +1,44 @@
+Arestas do grafo:
+
+0 → 1 peso 5
+1 → 2 peso 1
+1 → 3 peso 2
+2 → 4 peso 1
+4 → 3 peso -1
+
+Tabela das iterações:
+
+Iteração	Vértice 0	Vértice 1	Vértice 2	Vértice 3	Vértice 4
+Inicial	0, —	∞, —	∞, —	∞, —	∞, —
+1ª	0, —	5, 0	∞, —	∞, —	∞, —
+2ª	0, —	5, 0	6, 1	7, 1	∞, —
+3ª	0, —	5, 0	6, 1	7, 1	7, 2
+
+Até a 3ª iteração, temos:
+
+Distância até 0 = 0
+Distância até 1 = 5, vindo de 0
+Distância até 2 = 6, vindo de 1
+Distância até 3 = 7, vindo de 1
+Distância até 4 = 7, vindo de 2
+
+Mas como o grafo tem 5 vértices, o Bellman-Ford completo faz V - 1 = 4 iterações. Na 4ª, a aresta 4 → 3 melhora o caminho:
+
+4 → 3 peso -1
+distância de 4 = 7
+7 + (-1) = 6
+
+Então o valor final de 3 vira:
+
+Vértice 3 = 6, vindo de 4
+
+Caminho mínimo até o vértice 3:
+
+0 → 1 → 2 → 4 → 3
+
+Custo total:
+
+5 + 1 + 1 - 1 = 6
+
+Verificação de ciclo negativo:
+Não existe ciclo negativo, porque o grafo não tem caminho que volte para um vértice anterior formando ciclo. Portanto, não há ciclo negativo.
