@@ -1,0 +1,23 @@
+Tabela usando Bellman-Ford:
+
+Iteração	Vértice 0	Vértice 1	Vértice 2	Vértice 3	Vértice 4
+Inicial	0, —	∞, —	∞, —	∞, —	∞, —
+1ª	0, —	5, 0	∞, —	∞, —	∞, —
+2ª	0, —	5, 0	6, 1	7, 1	∞, —
+3ª	0, —	5, 0	6, 1	7, 1	7, 2
+
+Como existem 5 vértices, o Bellman-Ford completo normalmente faria V - 1 = 4 iterações. Então, na 4ª iteração:
+
+Iteração	Vértice 0	Vértice 1	Vértice 2	Vértice 3	Vértice 4
+4ª	0, —	5, 0	6, 1	6, 4	7, 2
+
+O menor caminho até o vértice 3 fica:
+
+0 → 1 → 2 → 4 → 3
+
+Custo:
+
+5 + 1 + 1 + (-1) = 6
+
+Verificação de ciclo negativo:
+Não existe ciclo negativo. Na verdade, esse grafo nem possui ciclo, porque as setas não formam um caminho que volte para um vértice anterior. Além disso, após a última verificação, nenhuma distância continuaria diminuindo, que é o critério usado pelo Bellman-Ford para detectar ciclo negativo.
