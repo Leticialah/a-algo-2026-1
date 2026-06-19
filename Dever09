@@ -1,0 +1,19 @@
+Fazendo pelo Algoritmo de Prim, começando pelo vértice A:
+
+Passo	Aresta escolhida	Peso	Motivo
+1	A → B	2	Menor aresta saindo de A
+2	A → D	3	Menor aresta ligando a árvore a outro vértice
+3	D → C	4	Menor aresta para incluir C
+
+Árvore Geradora Mínima, MST:
+
+A — B  peso 2
+A — D  peso 3
+D — C  peso 4
+
+Custo total:
+
+2 + 3 + 4 = 9
+
+Resposta final:
+A MST é formada pelas arestas A-B, A-D e D-C, com custo total igual a 9.
